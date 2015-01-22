@@ -23,6 +23,7 @@ debian/dkms_nvidia/dkms.conf                  usr/src/nvidia-346-346.35
 NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-bug-report.sh /usr/lib/nvidia-346/bin
 NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-xconfig /usr/lib/nvidia-346/bin
 NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-smi /usr/lib/nvidia-346/bin
+NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-settings /usr/lib/nvidia-346/bin
 NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-debugdump /usr/lib/nvidia-346/bin
 NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-cuda-mps-control /usr/lib/nvidia-346/bin
 NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-cuda-mps-server /usr/lib/nvidia-346/bin

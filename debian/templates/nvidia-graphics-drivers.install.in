@@ -23,6 +23,7 @@ debian/dkms_nvidia/dkms.conf                  usr/src/#DRIVERNAME#-#VERSION#
 #DIRNAME#/nvidia-bug-report.sh #PKGBINDIR#
 #DIRNAME#/nvidia-xconfig #PKGBINDIR#
 #DIRNAME#/nvidia-smi #PKGBINDIR#
+#DIRNAME#/nvidia-settings #PKGBINDIR#
 #DIRNAME#/nvidia-debugdump #PKGBINDIR#
 #DIRNAME#/nvidia-cuda-mps-control #PKGBINDIR#
 #DIRNAME#/nvidia-cuda-mps-server #PKGBINDIR#

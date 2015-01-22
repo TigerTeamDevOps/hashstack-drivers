@@ -245,6 +245,7 @@ configure/$(PKG_driver)::
 	#         or it will fail.
 	execstack -c $(CURDIR)/$(dirname)/nvidia-xconfig || true
 	execstack -c $(CURDIR)/$(dirname)/nvidia-smi || true
+	execstack -c $(CURDIR)/$(dirname)/nvidia-settings || true
 
 configure/$(PKG_driver_uvm)::configure/$(PKG_driver)
 	# Kernel module files
@@ -299,6 +300,7 @@ binary-install/$(PKG_driver):: gen-abi-substvars
 
 	dh_install -p$(PKG_driver) $(dirname)/nvidia-xconfig.1.gz "$(mandir)";
 	dh_install -p$(PKG_driver) $(dirname)/nvidia-smi.1.gz "$(mandir)";
+	dh_install -p$(PKG_driver) $(dirname)/nvidia-settings.1.gz "$(mandir)";
 	dh_install -p$(PKG_driver) $(dirname)/nvidia-cuda-mps-control.1.gz "$(mandir)";
 
 	# Rename the man pages in order to use alternatives
