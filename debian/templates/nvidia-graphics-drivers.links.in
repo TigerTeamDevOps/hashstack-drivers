@@ -20,6 +20,7 @@
 #PKGLIBDIR#/libnvidia-compiler.so.1 #PKGLIBDIR#/libnvidia-compiler.so
 
 #PKGLIBDIR#/libnvidia-ml.so.#VERSION# #PKGLIBDIR#/libnvidia-ml.so.1
+#PKGLIBDIR#/libnvidia-ml.so.#VERSION# /lib/libnvidia-ml.so
 #PKGLIBDIR#/libnvidia-ml.so.1 #PKGLIBDIR#/libnvidia-ml.so
 
 #PKGLIBDIR#/libnvcuvid.so.#VERSION# #PKGLIBDIR#/libnvcuvid.so.1

@@ -20,6 +20,7 @@
 /usr/lib/nvidia-346/libnvidia-compiler.so.1 /usr/lib/nvidia-346/libnvidia-compiler.so
 
 /usr/lib/nvidia-346/libnvidia-ml.so.346.35 /usr/lib/nvidia-346/libnvidia-ml.so.1
+/usr/lib/nvidia-346/libnvidia-ml.so.346.35 /lib/libnvidia-ml.so
 /usr/lib/nvidia-346/libnvidia-ml.so.1 /usr/lib/nvidia-346/libnvidia-ml.so
 
 /usr/lib/nvidia-346/libnvcuvid.so.346.35 /usr/lib/nvidia-346/libnvcuvid.so.1
