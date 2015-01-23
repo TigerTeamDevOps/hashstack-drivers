@@ -28,8 +28,6 @@ case "$1" in
 		update-alternatives --remove x86_64-linux-gnu_gl_conf /usr/lib/nvidia-346-prime/ld.so.conf
 		# Remove the alternative for glamor-egl
 		update-alternatives --remove glamor_conf /usr/share/nvidia-346/glamor.conf
-        update-alternatives --remove sagitta_conf /usr/share/nvidia-346/sagitta.conf
-
 		# explicit ldconfig due to alternatives
 		ldconfig
 

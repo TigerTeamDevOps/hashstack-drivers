@@ -13,6 +13,8 @@ TMP_FILE="/tmp/do_not_build_dkms_module"
 
 ARCH="x86_64"
 
+EXIT_CODE=0
+
 # Check the existence of a kernel named as $1
 _is_kernel_name_correct() {
     CORRECT="no"
@@ -157,11 +159,6 @@ case "$1" in
             --install /usr/share/X11/xorg.conf.d/glamoregl.conf glamor_conf \
             /usr/share/nvidia-346/glamor.conf 600
 
-        # install sagitta performance enhancements
-        update-alternatives --force \
-            --install /usr/share/X11/xorg.conf.d/sagitta.conf sagitta_conf \
-            /usr/share/nvidia-346/sagitta.conf 600
-
         # ldconfig needs to be run immediately as we're changing /etc/ld.so.conf.d/ with
         # alternatives.
         LDCONFIG_NOTRIGGER=y ldconfig
@@ -216,8 +213,15 @@ EOF
         else
             # Build the kernel module
             /usr/lib/dkms/common.postinst $PACKAGE_NAME $CVERSION /usr/share/$PACKAGE_NAME $ARCH $2
-            exit $?
+            EXIT_CODE=$?
         fi
+
+        # generate xorg.conf
+        /usr/bin/nvidia-xconfig -s -a --force-generate --allow-empty-initial-configuration \
+                --cool-bits=12 --registry-dwords="PerfLevelSrc=0x2222" \
+                --no-sli --connected-monitor="DFP-0"
+
+	exit $EXIT_CODE
         ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

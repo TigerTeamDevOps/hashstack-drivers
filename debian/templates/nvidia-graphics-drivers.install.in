@@ -3,7 +3,6 @@ debian/#DRIVERNAME#.override                 usr/share/lintian/overrides
 debian/#DRIVERNAME#.grub-gfxpayload          #PKGDATADIR#
 
 debian/glamor.conf                           #PKGDATADIR#
-debian/sagitta.conf                           #PKGDATADIR#
 
 #DIRNAME#/nvidia_drv.so #PKGDRIVERSDIR#
 #DIRNAME#/libglx.so.#VERSION# #NVIDIAEXTENSION#
