@@ -4,28 +4,28 @@ debian/nvidia-346.grub-gfxpayload          /usr/share/nvidia-346
 
 debian/glamor.conf                           /usr/share/nvidia-346
 
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia_drv.so /usr/lib/nvidia-346/xorg
-NVIDIA-Linux-x86_64-346.35-no-compat32/libglx.so.346.35 /usr/lib/nvidia-346/xorg
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia_drv.so /usr/lib/nvidia-346/xorg
+NVIDIA-Linux-x86_64-346.59-no-compat32/libglx.so.346.59 /usr/lib/nvidia-346/xorg
 
-NVIDIA-Linux-x86_64-346.35-no-compat32/libGL*.so*                  /usr/lib/nvidia-346
-NVIDIA-Linux-x86_64-346.35-no-compat32/libnv*.so*                  /usr/lib/nvidia-346
-NVIDIA-Linux-x86_64-346.35-no-compat32/libcuda*.so*                /usr/lib/nvidia-346
-NVIDIA-Linux-x86_64-346.35-no-compat32/libOpenCL*.so*              /usr/lib/nvidia-346
+NVIDIA-Linux-x86_64-346.59-no-compat32/libGL*.so*                  /usr/lib/nvidia-346
+NVIDIA-Linux-x86_64-346.59-no-compat32/libnv*.so*                  /usr/lib/nvidia-346
+NVIDIA-Linux-x86_64-346.59-no-compat32/libcuda*.so*                /usr/lib/nvidia-346
+NVIDIA-Linux-x86_64-346.59-no-compat32/libOpenCL*.so*              /usr/lib/nvidia-346
 
-NVIDIA-Linux-x86_64-346.35-no-compat32/libvdpau_nvidia.so*   /usr/lib/nvidia-346/vdpau
-NVIDIA-Linux-x86_64-346.35-no-compat32/tls/*.so*                   /usr/lib/nvidia-346/tls
+NVIDIA-Linux-x86_64-346.59-no-compat32/libvdpau_nvidia.so*   /usr/lib/nvidia-346/vdpau
+NVIDIA-Linux-x86_64-346.59-no-compat32/tls/*.so*                   /usr/lib/nvidia-346/tls
 
-debian/temp/modules/nvidia-kernel/kernel/*    usr/src/nvidia-346-346.35
-debian/dkms_nvidia/patches/*                  usr/src/nvidia-346-346.35/patches
-debian/dkms_nvidia/dkms.conf                  usr/src/nvidia-346-346.35
+debian/temp/modules/nvidia-kernel/kernel/*    usr/src/nvidia-346-346.59
+debian/dkms_nvidia/patches/*                  usr/src/nvidia-346-346.59/patches
+debian/dkms_nvidia/dkms.conf                  usr/src/nvidia-346-346.59
 
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-bug-report.sh /usr/lib/nvidia-346/bin
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-xconfig /usr/lib/nvidia-346/bin
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-smi /usr/lib/nvidia-346/bin
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-settings /usr/lib/nvidia-346/bin
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-debugdump /usr/lib/nvidia-346/bin
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-cuda-mps-control /usr/lib/nvidia-346/bin
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-cuda-mps-server /usr/lib/nvidia-346/bin
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia-bug-report.sh /usr/lib/nvidia-346/bin
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia-xconfig /usr/lib/nvidia-346/bin
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia-smi /usr/lib/nvidia-346/bin
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia-settings /usr/lib/nvidia-346/bin
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia-debugdump /usr/lib/nvidia-346/bin
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia-cuda-mps-control /usr/lib/nvidia-346/bin
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia-cuda-mps-server /usr/lib/nvidia-346/bin
 
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia.icd /usr/share/nvidia-346
-NVIDIA-Linux-x86_64-346.35-no-compat32/nvidia-application-profiles-346.35-rc /usr/share/nvidia-346
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia.icd /usr/share/nvidia-346
+NVIDIA-Linux-x86_64-346.59-no-compat32/nvidia-application-profiles-346.59-rc /usr/share/nvidia-346

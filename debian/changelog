@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-346 (346.59-0sagitta1) precise; urgency=low
+
+  * Upgrade to 346.59
+
+ -- sagitta <sagitta@inceptus>  Wed, 06 May 2015 21:31:34 -0700
+
 nvidia-graphics-drivers-346 (346.35-0sagitta1) precise; urgency=low
 
   * Initial release

@@ -25,7 +25,7 @@ Description: NVIDIA binary Xorg driver, kernel module and VDPAU library
 
 Package: nvidia-346-uvm
 Architecture: amd64
-Depends: ${misc:Depends}, nvidia-346 (>= 346.35)
+Depends: ${misc:Depends}, nvidia-346 (>= 346.59)
 Description: NVIDIA Unified Memory kernel module
  This package contains the NVIDIA Unified Memory kernel module.
 
