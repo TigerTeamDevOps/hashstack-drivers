@@ -58,9 +58,9 @@ PKG_driversdir       := $(libdir)/$(PKG_driver)/xorg
 PKG_extensionsdir    := $(PKG_driversdir)
 PKG_bindir           := $(PKG_libdir)/bin
 PKG_configdir        := $(PKG_libdir)
-ld_so_conf_dir       := $(PKG_configdir)
-ld_so_conf_file      := ld.so.conf
-alt_ld_so_conf_file  := alt_ld.so.conf
+ld_so_conf_dir       := /etc/ld.so.conf.d/
+ld_so_conf_file      := $(PKG_driver).conf
+alt_ld_so_conf_file  := $(PKG_driver)_alt.conf
 ld_so_conf_path      := $(ld_so_conf_dir)/$(ld_so_conf_file)
 alt_ld_so_conf_path  := $(ld_so_conf_dir)/$(alt_ld_so_conf_file)
 
@@ -102,14 +102,24 @@ define blacklist_file
 
 blacklist nouveau
 blacklist lbm-nouveau
-blacklist nvidia-173
-blacklist nvidia-96
-blacklist nvidia-304
+nvidia-173
+nvidia-304
+nvidia-304-updates
+nvidia-310
+nvidia-310-updates
+nvidia-313-updates
+nvidia-319
+nvidia-319-updates
+nvidia-331
+nvidia-331-updates
+nvidia-340
+nvidia-340-updates
+nvidia-346
+nvidia-346-updates
+nvidia-352
+nvidia-352-updates
 blacklist nvidia-current
 blacklist nvidia-current-updates
-blacklist nvidia-173-updates
-blacklist nvidia-96-updates
-blacklist nvidia-304-updates
 blacklist $(opposite_flavour)
 alias nvidia $(PKG_module)
 alias nvidia-uvm $(PKG_module)-uvm
