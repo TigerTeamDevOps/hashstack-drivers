@@ -1,3 +1,9 @@
+hashstack-nvidia-driver (352.41-2sagitta1) precise; urgency=medium
+
+  * Fix alternatives 
+
+ -- Jeremi Gosney <jgosney@sagitta.pw>  Sat, 17 Oct 2015 03:47:51 -0700
+
 hashstack-nvidia-driver (352.41-1sagitta1) precise; urgency=medium
 
   * Fix conflicts/replaces

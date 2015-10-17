@@ -58,9 +58,9 @@ PKG_driversdir       := $(libdir)/$(PKG_driver)/xorg
 PKG_extensionsdir    := $(PKG_driversdir)
 PKG_bindir           := $(PKG_libdir)/bin
 PKG_configdir        := $(PKG_libdir)
-ld_so_conf_dir       := /etc/ld.so.conf.d/
-ld_so_conf_file      := $(PKG_driver).conf
-alt_ld_so_conf_file  := $(PKG_driver)_alt.conf
+ld_so_conf_dir       := $(PKG_configdir)
+ld_so_conf_file      := ld.so.conf
+alt_ld_so_conf_file  := alt_ld.so.conf
 ld_so_conf_path      := $(ld_so_conf_dir)/$(ld_so_conf_file)
 alt_ld_so_conf_path  := $(ld_so_conf_dir)/$(alt_ld_so_conf_file)
 
@@ -85,11 +85,6 @@ grub_blacklistdir    := /usr/share/grub-gfxpayload-lists/blacklist
 # See LP: #538071.
 PKG_libconfdir := /lib/$(PKG_driver)
 
-# blacklist either the -updates or the non updates flavour
-opposite_flavour := $(shell (echo "$(PKG_driver)" | grep updates >/dev/null) && \
-        echo "$(PKG_driver)" | sed s/-updates// || \
-        echo "$(PKG_driver)-updates")
-
 #These "define" bits are needed for the blacklist file
 define newline
 
@@ -102,25 +97,42 @@ define blacklist_file
 
 blacklist nouveau
 blacklist lbm-nouveau
-nvidia-173
-nvidia-304
-nvidia-304-updates
-nvidia-310
-nvidia-310-updates
-nvidia-313-updates
-nvidia-319
-nvidia-319-updates
-nvidia-331
-nvidia-331-updates
-nvidia-340
-nvidia-340-updates
-nvidia-346
-nvidia-346-updates
-nvidia-352
-nvidia-352-updates
+blacklist nvidia-173
+blacklist nvidia-304
+blacklist nvidia-310
+blacklist nvidia-313
+blacklist nvidia-319
+blacklist nvidia-331
+blacklist nvidia-340
+blacklist nvidia-346
+blacklist nvidia-352
+blacklist nvidia-304-updates
+blacklist nvidia-310-updates
+blacklist nvidia-313-updates
+blacklist nvidia-319-updates
+blacklist nvidia-331-updates
+blacklist nvidia-340-updates
+blacklist nvidia-346-updates
+blacklist nvidia-352-updates
+blacklist nvidia-173-uvm
+blacklist nvidia-304-uvm
+blacklist nvidia-310-uvm
+blacklist nvidia-313-uvm
+blacklist nvidia-319-uvm
+blacklist nvidia-331-uvm
+blacklist nvidia-340-uvm
+blacklist nvidia-346-uvm
+blacklist nvidia-352-uvm
+blacklist nvidia-304-updates-uvm
+blacklist nvidia-310-updates-uvm
+blacklist nvidia-313-updates-uvm
+blacklist nvidia-319-updates-uvm
+blacklist nvidia-331-updates-uvm
+blacklist nvidia-340-updates-uvm
+blacklist nvidia-346-updates-uvm
+blacklist nvidia-352-updates-uvm
 blacklist nvidia-current
 blacklist nvidia-current-updates
-blacklist $(opposite_flavour)
 alias nvidia $(PKG_module)
 alias nvidia-uvm $(PKG_module)-uvm
 alias nouveau off
