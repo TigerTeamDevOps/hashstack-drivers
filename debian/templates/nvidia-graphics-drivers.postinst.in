@@ -206,7 +206,7 @@ task
 script
      dkms add -m $PACKAGE_NAME -v $CVERSION
      /usr/lib/dkms/dkms_autoinstaller start || ( rm -f $INIT_SCRIPT && exit 1 )
-     modprobe $PACKAGE_NAME || true
+     modprobe nvidia || true
      rm -f $INIT_SCRIPT
 end script
 EOF

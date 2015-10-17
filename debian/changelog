@@ -1,3 +1,10 @@
+hashstack-nvidia-driver (352.41-0sagitta1) precise; urgency=medium
+
+  * Upgrade to 352.41
+  * Rename package
+
+ -- Jeremi Gosney <jgosney@sagitta.pw>  Fri, 16 Oct 2015 23:44:41 -0700
+
 nvidia-graphics-drivers-346 (346.59-0sagitta1) precise; urgency=low
 
   * Upgrade to 346.59

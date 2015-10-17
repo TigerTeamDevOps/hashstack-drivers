@@ -17,12 +17,11 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 PATH := $(PATH):/usr/sbin
 
 # Package names
-PKG_flavour          := $(shell dpkg-parsechangelog | sed -n 's/^Source: //p' | sed 's/nvidia\-graphics\-drivers\-//g')
-PKG_driver           := nvidia-$(PKG_flavour)
+PKG_flavour          := $(shell dpkg-parsechangelog | awk '/Version:/{split($$2, ver, "."); print ver[1]}')
+PKG_driver           := $(shell dpkg-parsechangelog | awk -F' ' '/Source:/{print $$2}')
 PKG_driver_dev       := $(PKG_driver)-dev
 PKG_driver_uvm       := $(PKG_driver)-uvm
-PKG_version          := $(shell dpkg-parsechangelog | awk -F' ' '/^Version:/ {print $$2}' | awk -F- '{print $$1}')
-PKG_version          := $(shell echo $(PKG_version) | sed s/.*\.really\.//g)
+PKG_version          := $(shell dpkg-parsechangelog | awk '/Version:/{split($$2, ver, "-"); print ver[1]}')
 PKG_source           := $(shell dpkg-parsechangelog | sed -n 's/^Source: //p')
 PKG_module           := $(shell echo "$(PKG_driver)" | sed s/\-/_/g)
 
