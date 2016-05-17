@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ "$1" = "configure" ]; then
+    echo "Regenerating xorg.conf"
+    amdconfig --adapter=all --initial -f
+fi

@@ -1,3 +1,9 @@
+hashstack-drivers (3:361-0sagitta4) trusty; urgency=medium
+
+  * convert to metapackage
+
+ -- Jeremi Gosney <jgosney@sagitta.pw>  Mon, 16 May 2016 14:45:44 -0700
+
 hashstack-nvidia-driver (352.41-2sagitta1) precise; urgency=medium
 
   * Fix alternatives 
